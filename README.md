@@ -24,11 +24,13 @@ A list of file names of built distributions.
 
 ## Example usage
 
+```yaml
 uses: kobaltcore/renkit-action@v1
 with:
   renkit-version: 2.0.0
   renpy-version: 7.5.0
   renconstruct-config: config/renconstruct.toml
+```
 
 ## FAQ
 
