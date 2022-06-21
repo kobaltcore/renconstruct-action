@@ -95,7 +95,7 @@ async function run() {
   }
 
   // run renconstruct
-  await exec.exec("renconstruct", ["build", `-r=${cache_dir}`, `-c=${renconstruct_config}`, "-i=.", `-o=${core.toPlatformPath("../out-renconstruct")}`])
+  await exec.exec("renconstruct", ["build", `-r=${cache_dir}`, `-v=${renpy_version}`, `-c=${renconstruct_config}`, "-i=.", `-o=${core.toPlatformPath("../out-renconstruct")}`])
 
   // generate output list of built distributions
   const globber = await glob.create(core.toPlatformPath(path.resolve("../out-renconstruct/*")))
