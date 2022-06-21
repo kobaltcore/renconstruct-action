@@ -1,11 +1,11 @@
 build:
-	ncc build --license licenses.txt index.js
+	ncc build --license licenses.txt src/index.js
 
 build-mini:
-	ncc build --license licenses.txt -m index.js
+	ncc build --license licenses.txt -m src/index.js
 
 install:
 	npm install
 
 run:
-	node index.js
+	node src/index.js
