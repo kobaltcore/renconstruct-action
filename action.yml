@@ -1,4 +1,5 @@
 name: "renconstruct"
+author: "kobaltcore"
 description: "A GitHub action that packages renkit to allow the easy building and distribution of Ren'Py projects."
 inputs:
   renkit-version:
@@ -19,3 +20,6 @@ outputs:
 runs:
   using: "node16"
   main: "dist/index.js"
+branding:
+  icon: "box"
+  color: "yellow"
