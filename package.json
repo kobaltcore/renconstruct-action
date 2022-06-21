@@ -1,5 +1,5 @@
 {
-  "name": "renkit-action",
+  "name": "renconstruct-action",
   "version": "1.0.0",
   "description": "A GitHub action that packages renkit to allow the easy building and distribution of Ren'Py projects.",
   "main": "dist/index.js",

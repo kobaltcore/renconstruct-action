@@ -1,4 +1,4 @@
-name: "renkit"
+name: "renconstruct"
 description: "A GitHub action that packages renkit to allow the easy building and distribution of Ren'Py projects."
 inputs:
   renkit-version:
