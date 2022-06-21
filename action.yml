@@ -1,0 +1,21 @@
+name: "renkit"
+description: "A GitHub action that packages renkit to allow the easy building and distribution of Ren'Py projects."
+inputs:
+  renkit-version:
+    description: "The version of renkit to use during the build."
+    required: false
+    default: "latest"
+  renpy-version:
+    description: "The version of Ren'Py to use during the build."
+    required: false
+    default: "latest"
+  renconstruct-config:
+    description: "The path to the reoncstruct config file, relative to the root of the repository."
+    required: false
+    default: "renconstruct.toml"
+outputs:
+  distributions:
+    description: "A list of file names of built distributions."
+runs:
+  using: "node16"
+  main: "dist/index.js"
