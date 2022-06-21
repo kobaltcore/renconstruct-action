@@ -64760,8 +64760,7 @@ async function run() {
       console.log(`Downloading renkit from ${bin["browser_download_url"]}`)
       const renkit_path = await tool_cache.downloadTool(bin["browser_download_url"])
       console.log("Extracting renkit")
-      const renkit_extracted_dir = await tool_cache.extractZip(renkit_path, "renkit")
-      // tool_path_g = renkit_cache_dir
+      const renkit_extracted_dir = await tool_cache.extractZip(renkit_path, core.toPlatformPath(path.resolve("../renkit")))
       core.addPath(renkit_extracted_dir)
       break
     }
@@ -64800,6 +64799,9 @@ async function run() {
   // generate output list of built distributions
   const globber = await glob.create(core.toPlatformPath(path.resolve("../out-renconstruct/*")))
   const distributions = await globber.glob()
+
+  console.log(core.toPlatformPath(path.resolve("../out-renconstruct/*")))
+  console.log(distributions)
 
   core.setOutput("distributions", distributions)
 }
