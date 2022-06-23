@@ -1,6 +1,6 @@
 name: "renconstruct"
 author: "kobaltcore"
-description: "A GitHub action that packages renkit to allow the easy building and distribution of Ren'Py projects."
+description: "A GitHub action that packages renconstruct to allow the easy building and distribution of Ren'Py projects."
 inputs:
   renkit-version:
     description: "The version of renkit to use during the build."
@@ -11,7 +11,7 @@ inputs:
     required: false
     default: "latest"
   renconstruct-config:
-    description: "The path to the reoncstruct config file, relative to the root of the repository."
+    description: "The path to the renconstruct config file, relative to the root of the repository."
     required: false
     default: "renconstruct.toml"
 outputs:
