@@ -100,6 +100,9 @@ async function run() {
   const globber = await glob.create(distribution_dir)
   const distributions = await globber.glob()
 
+  console.log(distributions)
+  console.log(distribution_dir)
+
   core.setOutput("distributions", distributions)
   core.setOutput("distribution_dir", distribution_dir)
 }
