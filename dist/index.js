@@ -64792,13 +64792,22 @@ async function run() {
     const cache_id = await cache.saveCache([cache_dir], cache_key)
   }
 
+  console.log("before build")
   // run renconstruct
   await exec.exec("renconstruct", ["build", `-r=${cache_dir}`, `-v=${renpy_version}`, `-c=${renconstruct_config}`, "-i=.", `-o=${core.toPlatformPath("../out-renconstruct")}`])
 
+  console.log("after build")
+
+  console.log("before glob")
   // generate output list of built distributions
   const distribution_dir = core.toPlatformPath(path.resolve("../out-renconstruct/*"))
   const globber = await glob.create(distribution_dir)
   const distributions = await globber.glob()
+  console.log("after glob")
+
+  console.log(distributions)
+  console.log(distribution_dir)
+  console.log("after print")
 
   core.setOutput("distributions", distributions)
   core.setOutput("distribution_dir", distribution_dir)
