@@ -33,8 +33,7 @@ async function run() {
     throw new Error(`renconstruct config file not found at '${renconstruct_config}'`)
   }
 
-  // resolve renkit version if "latest"
-  const http = new http_client.HttpClient("renkit-action")
+  const http = new http_client.HttpClient("renconstruct-action")
   const resp = await http.get("https://api.github.com/repos/kobaltcore/renkit/releases")
 
   if (resp.message.statusCode != 200) {
